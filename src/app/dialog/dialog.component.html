@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Static title: Dialog title </h1>
+<h1 mat-dialog-title>Bound title: {{ title }}</h1>
+
+<div mat-dialog-content>
+  <p>Static content: Dialog content</p>
+  <p>Bound content: {{ content }}</p>
+</div>
+
+<div mat-dialog-actions>
+  Standard button:&nbsp;<button (click)="onNoClick()" style="margin-right:25px;">Close</button>
+  Angular Material button:&nbsp;<button mat-raised-button color="accent" (click)="onNoClick()">Close</button>
+</div>

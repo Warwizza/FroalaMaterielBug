@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">{{ title }}</mat-toolbar>
+<mat-card>
+  <mat-card-content>
+    <h3>steps to reproduce the bug:</h3>
+    <ol>
+      <li>Click on the 'Open dialog' button.</li>
+      <li>The dialog opens properly. Notice the bound title and content and the colored button.</li>
+      <li>Close the dialog.</li>
+      <li>Click on the Custom button (question mark) in the Froala editor to oppen the dialog .</li>
+      <li>The Dialog will open, but it will not render any bound Angular content (only static html text) and the UI won't work as expected.</li>
+    </ol>
+    <div [froalaEditor]="froalaOptions">Hello, Froala!</div>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="openDialog()">Open dialog</button>
+  </mat-card-actions>
+</mat-card>
